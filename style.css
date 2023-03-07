@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* background: linear-gradient(120deg, #cfe2f5, #061e4d); */
+    background: linear-gradient(120deg, #9bc4ee, #7a1ba0);
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    background: transparent;
+    height: 25rem;
+    width: 60rem;
+
+    padding: 2rem 3rem;
+    border-radius: .3rem;
+    box-shadow: 0rem .8rem 1rem rgba(0, 0, 0, .5);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    animation: aparecer;
+    animation-duration: 2s;
+}
+
+.relogio-item {
+    height: 17rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(5, 5, 5, .9);
+    box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, .7);
+    border-radius: .7rem;
+    letter-spacing: .3rem;
+}
+
+.relogio-item span {
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+.relogio-item span.tempo {
+    font-size: 1rem;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* MEDIA QUERIES */
+@media (max-width:738px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    .relogio {
+        flex-direction: column;
+        height: 50rem;
+        width: 40rem;
+    }
+
+    .relogio-item {
+        height: 13rem;
+        width: 15rem;
+    }
+
+    .relogio-item span {
+        font-size: 5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width:450px) {
+    .relogio {
+        width: 35rem;
+    }
+}
